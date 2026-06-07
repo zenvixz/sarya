@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="اتصل بسَرِيًّا للطلبات، الاشتراطات الخاصة، والتواصل المباشر.">
+    <title>اتصل بنا | سَرِيًّا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  </head>
+  <body data-page="contact">
+    <header class="site-header">
+      <div class="top-note">تواصل مباشر للطلبات والاشتراطات الخاصة</div>
+      <nav class="nav-shell" aria-label="التنقل الرئيسي">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">سَرِيًّا</span>
+          <span class="brand-sub">روح الدار</span>
+        </a>
+        <button class="icon-button nav-toggle" type="button" data-nav-toggle aria-label="فتح القائمة">
+          <i data-lucide="menu"></i>
+        </button>
+        <div class="nav-links" data-nav-menu>
+          <a href="../index.html">الرئيسية</a>
+          <a href="../sarya-store/">المتجر</a>
+          <a href="../sarya-story/">قصة سَرِيًّا</a>
+          <a class="active" href="./">اتصل بنا</a>
+          <a href="../sarya-admin/">لوحة الإدارة</a>
+        </div>
+        <div class="nav-actions">
+          <button class="icon-button" type="button" data-search-open aria-label="بحث">
+            <i data-lucide="search"></i>
+          </button>
+          <a class="cart-pill" href="../sarya-store/#cart" aria-label="سلة التسوق">
+            <i data-lucide="shopping-bag"></i>
+            <span data-cart-count>0</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-layout section-wrap">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact Us</p>
+          <h1>خلينا نسمع منك</h1>
+          <p>للطلبات، الهدايا، الاشتراكات الخاصة، أو أي سؤال عن المنتجات الآمنة للحساسية.</p>
+          <div class="contact-cards">
+            <a href="https://wa.me/" class="mini-card">
+              <i data-lucide="message-circle"></i>
+              واتساب
+            </a>
+            <a href="mailto:hello@sarya.example" class="mini-card">
+              <i data-lucide="mail"></i>
+              البريد
+            </a>
+            <a href="#" class="mini-card">
+              <i data-lucide="instagram"></i>
+              إنستجرام
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <label>
+            الاسم
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            البريد الإلكتروني
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            موضوع الرسالة
+            <input type="text" name="subject" required>
+          </label>
+          <label>
+            الرسالة
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">
+            <i data-lucide="send"></i>
+            إرسال
+          </button>
+          <p class="form-status" data-form-status></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>سَرِيًّا</strong>
+        <p>خدمة عملاء هادئة وواضحة لبيت يحب الاختيارات النظيفة.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">الرئيسية</a>
+        <a href="../sarya-store/">المتجر</a>
+        <a href="../sarya-story/">القصة</a>
+      </div>
+    </footer>
+
+    <div class="search-panel" data-search-panel hidden>
+      <div class="search-box">
+        <button class="icon-button" type="button" data-search-close aria-label="إغلاق البحث">
+          <i data-lucide="x"></i>
+        </button>
+        <label for="global-search">بحث سريع</label>
+        <input id="global-search" type="search" placeholder="ابحثي عن صابون، فخار، أعشاب...">
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
+
+    <a class="whatsapp-float" href="https://wa.me/" aria-label="واتساب">
+      <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

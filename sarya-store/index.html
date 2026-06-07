@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="متجر سَرِيًّا للمنتجات الطبيعية، الفخار الصحي، الشموع، الأعشاب، والمنظفات الآمنة للحساسية.">
+    <title>المتجر | سَرِيًّا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  </head>
+  <body data-page="shop">
+    <header class="site-header">
+      <div class="top-note">فلترة ذكية حسب القسم، السعر، ونوع الاستخدام</div>
+      <nav class="nav-shell" aria-label="التنقل الرئيسي">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">سَرِيًّا</span>
+          <span class="brand-sub">روح الدار</span>
+        </a>
+        <button class="icon-button nav-toggle" type="button" data-nav-toggle aria-label="فتح القائمة">
+          <i data-lucide="menu"></i>
+        </button>
+        <div class="nav-links" data-nav-menu>
+          <a href="../index.html">الرئيسية</a>
+          <a class="active" href="./">المتجر</a>
+          <a href="../sarya-story/">قصة سَرِيًّا</a>
+          <a href="../sarya-contact/">اتصل بنا</a>
+          <a href="../sarya-admin/">لوحة الإدارة</a>
+        </div>
+        <div class="nav-actions">
+          <button class="icon-button" type="button" data-search-open aria-label="بحث">
+            <i data-lucide="search"></i>
+          </button>
+          <a class="cart-pill" href="#cart" aria-label="سلة التسوق">
+            <i data-lucide="shopping-bag"></i>
+            <span data-cart-count>0</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <p class="eyebrow">Shop / Product Catalog</p>
+        <h1>متجر سَرِيًّا</h1>
+        <p>واجهة كتالوج جاهزة للعرض على العميل، مع مكان واضح للصور التي ستضاف لاحقا من لوحة الإدارة.</p>
+      </section>
+
+      <section class="shop-layout section-wrap">
+        <aside class="filters-panel">
+          <div class="filter-group">
+            <label for="category-filter">القسم</label>
+            <select id="category-filter" data-category-filter></select>
+          </div>
+          <div class="filter-group">
+            <label for="use-filter">نوع الاستخدام</label>
+            <select id="use-filter" data-use-filter>
+              <option value="all">كل الاستخدامات</option>
+              <option value="skin">العناية</option>
+              <option value="home">المنزل</option>
+              <option value="craft">الحرفة</option>
+              <option value="wellness">الصحة والهدوء</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="price-filter">السعر حتى <span data-price-value>900</span> ج.م</label>
+            <input id="price-filter" type="range" min="100" max="900" step="50" value="900" data-price-filter>
+          </div>
+        </aside>
+
+        <div class="shop-main">
+          <div class="toolbar">
+            <p><span data-product-count>0</span> منتج في العرض</p>
+            <select aria-label="ترتيب المنتجات" data-sort-filter>
+              <option value="featured">الأكثر تميزا</option>
+              <option value="price-asc">السعر من الأقل</option>
+              <option value="price-desc">السعر من الأعلى</option>
+              <option value="rating">الأعلى تقييما</option>
+            </select>
+          </div>
+          <div class="product-grid" data-product-grid></div>
+        </div>
+      </section>
+
+      <section id="cart" class="cart-preview section-wrap">
+        <div>
+          <p class="eyebrow">Cart Demo</p>
+          <h2>سلة العرض</h2>
+        </div>
+        <div class="cart-list" data-cart-list></div>
+      </section>
+    </main>
+
+    <dialog class="product-dialog" data-product-dialog>
+      <button class="icon-button dialog-close" type="button" data-dialog-close aria-label="إغلاق">
+        <i data-lucide="x"></i>
+      </button>
+      <div data-dialog-content></div>
+    </dialog>
+
+    <footer class="site-footer">
+      <div>
+        <strong>سَرِيًّا</strong>
+        <p>منتجات طبيعية، حرف مصرية، وواجهة متجر جاهزة لمرحلة قاعدة البيانات.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">الرئيسية</a>
+        <a href="../sarya-story/">القصة</a>
+        <a href="../sarya-contact/">تواصل</a>
+      </div>
+    </footer>
+
+    <div class="search-panel" data-search-panel hidden>
+      <div class="search-box">
+        <button class="icon-button" type="button" data-search-close aria-label="إغلاق البحث">
+          <i data-lucide="x"></i>
+        </button>
+        <label for="global-search">بحث سريع</label>
+        <input id="global-search" type="search" placeholder="ابحثي عن صابون، فخار، أعشاب...">
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
+
+    <a class="whatsapp-float" href="https://wa.me/" aria-label="واتساب">
+      <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

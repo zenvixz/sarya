@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="لوحة إدارة صور سَرِيًّا التجريبية لمرحلة واجهة المستخدم.">
+    <title>لوحة الإدارة | سَرِيًّا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  </head>
+  <body data-page="admin">
+    <header class="site-header">
+      <div class="top-note">مرحلة UI فقط - الصور تحفظ محليا داخل المتصفح</div>
+      <nav class="nav-shell" aria-label="التنقل الرئيسي">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">سَرِيًّا</span>
+          <span class="brand-sub">روح الدار</span>
+        </a>
+        <button class="icon-button nav-toggle" type="button" data-nav-toggle aria-label="فتح القائمة">
+          <i data-lucide="menu"></i>
+        </button>
+        <div class="nav-links" data-nav-menu>
+          <a href="../index.html">الرئيسية</a>
+          <a href="../sarya-store/">المتجر</a>
+          <a href="../sarya-story/">قصة سَرِيًّا</a>
+          <a href="../sarya-contact/">اتصل بنا</a>
+          <a class="active" href="./">لوحة الإدارة</a>
+        </div>
+        <div class="nav-actions">
+          <a class="cart-pill" href="../sarya-store/#cart" aria-label="سلة التسوق">
+            <i data-lucide="shopping-bag"></i>
+            <span data-cart-count>0</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="admin-shell section-wrap">
+        <div class="admin-intro">
+          <p class="eyebrow">Admin UI</p>
+          <h1>إدارة الصور</h1>
+          <p>هذه لوحة عرض للعميل قبل قاعدة البيانات. عند المرحلة التالية سنربط نفس الحقول بالتخزين الحقيقي.</p>
+        </div>
+
+        <div class="admin-grid">
+          <section class="admin-panel">
+            <h2>الصورة الرئيسية</h2>
+            <div class="upload-preview" data-admin-preview="hero">
+              <span>لا توجد صورة</span>
+            </div>
+            <label class="file-control">
+              <i data-lucide="upload"></i>
+              اختيار صورة
+              <input type="file" accept="image/*" data-image-upload="hero">
+            </label>
+          </section>
+
+          <section class="admin-panel">
+            <h2>صور الإيفنتات</h2>
+            <div class="gallery-admin" data-admin-gallery></div>
+            <label class="file-control">
+              <i data-lucide="image-plus"></i>
+              إضافة صورة
+              <input type="file" accept="image/*" multiple data-gallery-upload>
+            </label>
+          </section>
+        </div>
+
+        <section class="admin-panel wide">
+          <div class="panel-heading">
+            <h2>صور المنتجات</h2>
+            <button class="button ghost small" type="button" data-reset-images>
+              <i data-lucide="rotate-ccw"></i>
+              مسح صور العرض
+            </button>
+          </div>
+          <div class="product-admin-grid" data-product-admin-grid></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>سَرِيًّا</strong>
+        <p>لوحة إدارة جاهزة للربط بقاعدة البيانات في المرحلة الثانية.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">الرئيسية</a>
+        <a href="../sarya-store/">المتجر</a>
+        <a href="../sarya-contact/">تواصل</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
